@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/marrow-framework/core/main/logo.png" alt="Marrow" width="120">
+<img src="https://raw.githubusercontent.com/marrow-framework/.github/main/logo.png" alt="Marrow" width="120">
 
 # Marrow
 
