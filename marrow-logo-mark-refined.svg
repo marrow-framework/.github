@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 345 270"
+     width="345" height="270"
+     fill="none">
+  <defs>
+    <!-- Warm Marrow orange: close to the reference, but smoother and more controlled -->
+    <linearGradient id="marrowGradient" x1="52" y1="45" x2="303" y2="222"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB000"/>
+      <stop offset="0.38" stop-color="#FF8500"/>
+      <stop offset="0.72" stop-color="#FF6500"/>
+      <stop offset="1" stop-color="#F4511E"/>
+    </linearGradient>
+
+    <!-- Very subtle highlight used only on the upper ribbon surfaces -->
+    <linearGradient id="marrowHighlight" x1="74" y1="44" x2="207" y2="137"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC247" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#FF8A00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LEFT HALF
+       A continuous folded ribbon forming the left side of the M. -->
+  <path fill="url(#marrowGradient)" d="
+    M 44 75
+    C 44 68, 47 62, 53 59
+    L 93 40
+    C 99 37, 106 39, 112 42
+    L 242 113
+    C 249 117, 251 124, 248 130
+    C 247 133, 245 136, 241 138
+    L 196 155
+    C 194 156, 192 155, 190 154
+    L 107 108
+    L 107 236
+    L 54 207
+    C 47 203, 43 197, 43 190
+    L 43 78
+    C 43 77, 43 76, 44 75
+    Z"/>
+
+  <!-- RIGHT HALF
+       Mirrored visual weight, with the characteristic open inner edge. -->
+  <path fill="url(#marrowGradient)" d="
+    M 211 89
+    L 297 41
+    C 303 38, 309 40, 312 45
+    C 313 47, 314 50, 314 54
+    L 314 194
+    C 314 201, 310 207, 304 211
+    L 250 236
+    L 250 120
+    C 250 116, 247 112, 243 110
+    L 211 92
+    C 210 91, 210 90, 211 89
+    Z"/>
+
+  <!-- Controlled highlight following the fold on the upper-left ribbon -->
+  <path fill="url(#marrowHighlight)" d="
+    M 53 59
+    L 94 40
+    C 100 37, 106 39, 112 42
+    L 224 103
+    L 195 118
+    L 107 70
+    L 54 96
+    L 44 90
+    L 44 75
+    C 44 68, 47 62, 53 59
+    Z"/>
+</svg>
