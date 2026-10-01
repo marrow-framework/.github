@@ -7,9 +7,9 @@
 **A modular, HMVC-first PHP framework — explicit dependencies over global resolution, service injection over magic.**
 
 [![CI](https://img.shields.io/github/actions/workflow/status/marrow-framework/core/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/marrow-framework/core/actions/workflows/ci.yml)
+[![Packagist Version](https://img.shields.io/packagist/v/marrow/framework?style=flat-square&label=packagist)](https://packagist.org/packages/marrow/framework)
 [![PHP 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
 [![License MIT](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)](https://github.com/marrow-framework/core/blob/main/LICENSE)
-[![Version](https://img.shields.io/badge/version-2.3.0-f97316?style=flat-square)](https://github.com/marrow-framework/core/releases)
 
 [Documentation](https://github.com/marrow-framework/core/tree/main/docs) · [Getting started](https://github.com/marrow-framework/core/blob/main/docs/getting-started.md) · [Changelog](https://github.com/marrow-framework/core/blob/main/CHANGELOG.md)
 
@@ -52,14 +52,15 @@ php forge serve --watch-css
 | **[core](https://github.com/marrow-framework/core)** | The framework itself — container, modules, router, ORM, auth, CLI (`forge`). Distributed as `marrow/framework`. |
 | **[skeleton](https://github.com/marrow-framework/skeleton)** | The starter application project — `composer create-project marrow/skeleton` and you have a running app. |
 | **[form-builder](https://github.com/marrow-framework/form-builder)** | Django-style declarative forms: define fields as attributes on the backend, validate with Marrow's own rule engine, render semantic HTML — no fluent HTML builder, no duplicated frontend rules. |
+| **[warden](https://github.com/marrow-framework/warden)** | Account security scaffolding — login, registration, password reset, email verification, remember-me, and a 2FA login challenge. Publishes real, editable controllers/views/migrations into `modules/Auth/` (Breeze-style); only token hashing/signing stays in the package. `php forge warden:install`. |
 | **[anvil](https://github.com/marrow-framework/anvil)** | Local Docker Compose dev environment — Laravel Sail's role, under Marrow's own name. `php forge anvil:install --services=mysql,redis,node`. |
-| **[compass](https://github.com/marrow-framework/compass)** | Generates `AGENTS.md` — a live map of an app's modules, routes, and config, plus Marrow-specific gotchas, for AI coding agents and new contributors. |
+| **[ai-context](https://github.com/marrow-framework/ai-context)** | Generates `AGENTS.md` — a live map of an app's modules, routes, and config, plus Marrow-specific gotchas, for AI coding agents and new contributors. |
 
 Every companion package is an independent, self-documented Composer package (own `README`/`LICENSE`) that registers itself automatically on `composer require` via package auto-discovery — no manual step in `config/modules.php`.
 
 ```bash
-composer require marrow/form-builder
-composer require --dev marrow/anvil marrow/compass
+composer require marrow/form-builder marrow/warden
+composer require --dev marrow/anvil marrow/ai-context
 ```
 
 ## Design principles
@@ -76,3 +77,11 @@ Each repository documents its own contribution workflow. In general: PHP 8.2+, s
 ## License
 
 All Marrow repositories are MIT licensed.
+
+---
+
+<div align="center">
+
+Made with ❤️ by [Aure Dulvresse](https://github.com/AureDulvresse)
+
+</div>
